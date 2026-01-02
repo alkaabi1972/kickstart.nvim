@@ -105,6 +105,43 @@ Start Neovim
 nvim
 ```
 
+NOTE:
+For Rasspberry Pi (zero in this case), to install lates Neovim. Issue:
+
+```sh
+git clone https://github.com/neovim/neovim
+
+cd neovim
+
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
+
+get checkout stable
+
+sudo make install
+
+export PATH="$HOME/neovim/bin:$PATH"
+```
+
+or genrate a package:
+
+```sh
+
+cd build && sudo cpack -G DEB && sudo dpkg -i nvim-linux-armv61.deb
+```
+
+or Zip:
+
+```sh
+sudo cpack -G ZIP 
+```
+
+and then exctract with:
+
+```sh
+unzip nvim-linux-armv6l.zip
+
+```
+
 That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
 
 To install your language LSP
