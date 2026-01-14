@@ -162,6 +162,24 @@ Zig
 :Lspinstall zig
 ```
 
+C/C++
+
+```sh
+:Lspinstall c
+```
+
+NOTE: PiZero might complain about unsported platform.
+  install clangd using `sudo apt install clangd`
+  and add the following to ur "./config/nvim/lua/kiickstart/plugins/lspconfig.lua":
+
+  ```sh
+  vim.lsp,config('clangd', {
+    cmd = { "clangd", "--background-index", "--clang-tidy" }, -- Customize arguments as needed
+    -- other setup options
+    })
+  ```
+
+
 the current plugin status. Hit `q` to close the window.
 
 #### Read The Friendly Documentation
