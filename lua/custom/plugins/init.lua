@@ -2,7 +2,12 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+-- My test lua run command
+require 'custom.plugins.neo-tree'
+vim.keymap.set('n', '<F5>', '<Cmd>luafile %<CR>', { desc = 'Source current Lua file' })
 
+vim.keymap.set('n', '\\', ':Neotree<CR>')
+vim.cmd.colorscheme 'habamax'
 vim.cmd.colorscheme 'vim'
 -- Set for all modes with blinking
 vim.opt.guicursor = 'a:blinkwait700-blinkon400-blinkoff250'
