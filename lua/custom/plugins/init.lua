@@ -8,7 +8,6 @@ vim.keymap.set('n', '<F5>', '<Cmd>luafile %<CR>', { desc = 'Source current Lua f
 
 vim.keymap.set('n', '\\', ':Neotree<CR>')
 vim.cmd.colorscheme 'habamax'
-vim.cmd.colorscheme 'vim'
 -- Set for all modes with blinking
 vim.opt.guicursor = 'a:blinkwait700-blinkon400-blinkoff250'
 vim.cmd [[highlight Cursor guibg=#FFFF00 guifg=#FFFFFF]]
